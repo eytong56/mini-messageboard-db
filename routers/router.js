@@ -12,7 +12,7 @@ router.get("/new", (req, res) => {
   res.render("form");
 });
 
-app.get('/favicon.ico', (req, res) => {
+router.get('/favicon.ico', (req, res) => {
   res.status(204).send(); // No content
 });
 
