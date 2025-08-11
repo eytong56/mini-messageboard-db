@@ -1,5 +1,5 @@
 import { Client } from "pg";
-import "dotenv/config"
+import "dotenv/config";
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages (
@@ -18,7 +18,9 @@ VALUES
 
 async function main() {
   console.log("seeding...");
-  const client = new Client();
+  const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+  });
   await client.connect();
   await client.query(SQL);
   await client.end();
@@ -26,4 +28,3 @@ async function main() {
 }
 
 main();
-
