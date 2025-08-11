@@ -3,7 +3,7 @@ import path from "path";
 import "dotenv/config";
 import router from "./routers/router.js";
 const __dirname = import.meta.dirname;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.set("views", path.join(__dirname, "views"));
