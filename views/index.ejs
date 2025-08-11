@@ -10,7 +10,7 @@
   <% messages.forEach((message) => { %>
     <div>
       <p><%= message.text %></p>
-      <p>Posted by <%= message.user %></p>
+      <p>Posted by <%= message.name %></p>
       <form action="/<%= message.id %>">
         <input type="submit" value="See details"/>
       </form>

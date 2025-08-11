@@ -1,15 +1,16 @@
 import express from "express";
 import path from "path";
-import indexRouter from "./routers/indexRouter.js";
-const PORT = 3000;
+import "dotenv/config";
+import router from "./routers/router.js";
 const __dirname = import.meta.dirname;
+const PORT = process.env.PORT;
 
 const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
-app.use("/", indexRouter);
+app.use("/", router);
 
 app.listen(PORT, () => {
   console.log(`Server running at localhost:${PORT}`);

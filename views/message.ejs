@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message from <%= message.user %></title>
+  <title>Message from <%= message.name %></title>
 </head>
 <body>
   <p>Text: <%= message.text %></p>
-  <p>User: <%= message.user %></p>
-  <p>Date posted: <%= message.added %></p>
+  <p>User: <%= message.name %></p>
+  <p>Date posted: <%= message.created_at %></p>
 </body>
 </html>
