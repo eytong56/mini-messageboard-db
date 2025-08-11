@@ -12,6 +12,10 @@ router.get("/new", (req, res) => {
   res.render("form");
 });
 
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).send(); // No content
+});
+
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
   res.render("message", {
